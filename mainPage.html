@@ -55,8 +55,9 @@
                  }
         function change() {
     		var elem = document.getElementById("myButton1");
-    		if (elem.value=="Click It Again...") elem.value = "Click It...";
-    		else elem.value = "Click It Again...";
+    		if (elem.value=="Click it...") elem.value = "Click It Again...";
+    		else if (elem.value=="Click It Again...") elem.value = "Click It Again... AGAIN";
+			else if (elem.value=="Click It Again... AGAIN") elem.value = "Click it...";
          }
    </script>
 
