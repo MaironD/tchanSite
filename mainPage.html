@@ -44,7 +44,7 @@
   <h1>Button IS HERE!!</h1>
   <p><u><b>Trust me, you're going to like the way you click,<br> I guarantee it.<b><u></p>
     
-    <input onclick="change(),play()" type="button" value="Click it..." id="myButton1">
+    <input onclick="change(),play(),changeAudio()" type="button" value="Click it..." id="myButton1">
   <audio id="audio" src="https://vocaroo.com/media_command.php?media=s0C5fZVjxKPh&command=download_mp3"></audio>
     <audio id="audio2" src="https://vocaroo.com/media_command.php?media=s1g4GDEgJ6hJ&command=download_mp3"></audio>
     <audio id="audio3" src="https://vocaroo.com/media_command.php?media=s0Zk9dTpwLzs&command=download_mp3"></audio>
@@ -61,7 +61,20 @@
         else if (elem.value=="Click It Again...") elem.value = "Click It Again...AGAIN";
       else if (elem.value=="Click It Again... AGAIN") elem.value = "Click it...";
          }
-         function changeAudio () {
+        function changeAudio() {
+        var audio = document.getElementById('audio');
+        if (a==1) {     audio.src='https://vocaroo.com/media_command.phpmedia=s0C5fZVjxKPh&command=download_mp3';
+    a = 2;
+  }
+  else if (a==2) {
+    audio.src = 'https://vocaroo.com/media_command.php?media=s1g4GDEgJ6hJ&command=download_mp3';
+    a = 3;
+  }
+  else if (a==3) {
+  audi.src = 'https://vocaroo.com/media_command.php?media=s0Zk9dTpwLzs&command=download_mp3';
+  a = 1;
+  document.getElementById('audio').load();
+}function changeAudio () {
          }
         
    </script> 
