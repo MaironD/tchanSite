@@ -44,20 +44,29 @@
   <h1>Button IS HERE!!</h1>
   <p><u><b>Trust me, you're going to like the way you click,<br> I guarantee it.<b><u></p>
     
-    <input onclick="change(),play()" type="button" value="Click it..." id="myButton1">
-  <audio id="audio" src="https://vocaroo.com/media_command.php?media=s0C5fZVjxKPh&command=download_mp3"></audio>
+    <input onclick="change(),play()"type="button" value="Click it..." id="myButton1">
+      <audio id="audio1" src="https://vocaroo.com/media_command.php?media=s0C5fZVjxKPh&command=download_mp3" </audio>
+      <audio id="audio2" src="https://vocaroo.com/media_command.php?media=s1g4GDEgJ6hJ&command=download_mp3" </audio>
+      <audio id="audio3" src="https://vocaroo.com/media_command.php?media=s0Zk9dTpwLzs&command=download_mp3" </audio>
   </div>
     <script>
-      function play() {
-          var audio = document.getElementById("audio");
-          audio.play();
-                 }
-        function change() {
-        var elem = document.getElementById("myButton1");
-        if (elem.value=="Click it...") elem.value = "Click It Again...";
-        else if (elem.value=="Click It Again...") elem.value = "Click It Again...AGAIN";
-      else if (elem.value=="Click It Again... AGAIN") elem.value = "Click it...";
-         }
+      function play(elementID) {
+      var audio = document.getElementById(elementID);
+        audio.play();
+    }
+  function change() {
+      var elem = document.getElementById("myButton1");
+      if (elem.value=="Click it...") {
+          play("audio1");
+          elem.value = "Click It Again...";
+        }else if (elem.value=="Click It Again..."){
+          play("audio2");
+          elem.value = "Click It Again...AGAIN";
+      }else if (elem.value=="Click It Again...AGAIN") {
+          play("audio3");
+          elem.value = "Click it...";
+        }
+      }
      </script> 
 
     
