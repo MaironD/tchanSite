@@ -1,11 +1,12 @@
 
       body {
           font-family: 'Cinzel', serif;
-            background-color: #D8D8D8;
+          background-color: #D8D8D8;
         }
       div {
           text-align: center;
           background-color: gray;
+          width: 500px;
             }
       h1 {
           color: white;
