@@ -1,4 +1,4 @@
-    <script>
+
       function play(elementID) {
       var audio = document.getElementById(elementID);
         audio.play();
@@ -16,4 +16,3 @@
           elem.value = "Click it...";
         }
       }
-     </script> 
